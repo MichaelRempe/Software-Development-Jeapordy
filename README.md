@@ -1,2 +1,2 @@
 # Software-Development-Jeapordy
-Software Development Basic Trivia Game
+Final Project for SD: Game Development with Android Studio
