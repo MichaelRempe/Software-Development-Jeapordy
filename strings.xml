@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">jepordyMain</string>
+    <string name="PHP">PHP</string>
+    <string name="JavaScript">Java Script</string>
+    <string name="Android">Android</string>
+    <string name="Answer_Hint">Enter Your Answer Here!</string>
+    <string name="Submit">Submit</string>
+    <string name="Return">Return!</string>
+</resources>
