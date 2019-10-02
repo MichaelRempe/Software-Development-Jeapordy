@@ -36,7 +36,12 @@ public class Answers_Activity extends AppCompatActivity {
         value = intent.getIntExtra("points",0);
 
         TextView Answer_View = (TextView) findViewById(R.id.Answer);
-        if(input.equals(jsAnswers.get(index))|| input.equals(phpAnswers.get(index)) || input.equals(andAnswers.get(index)))
+
+        //scrub input to ignore case and white space
+        input = input.trim();
+        
+        //Checks for valid user input against random question and matching answer index
+        if((input.equalsIgnoreCase(jsAnswers.get(index)))|| input.equalsIgnoreCase(phpAnswers.get(index)) || input.equalsIgnoreCase(andAnswers.get(index)))
             Answer_View.setText("Correct Answer! You've been awarded: "+value+" points.");
         else {
             Answer_View.setText("Incorrect! Hit the return button to keep playing.");
@@ -44,6 +49,7 @@ public class Answers_Activity extends AppCompatActivity {
         }
     }
 
+    //returns results of user answer
     public void onReturn(View view) {
         Intent Return = new Intent(this, Questions_Activity.class);
         Return.putExtra("points", value);
@@ -51,3 +57,4 @@ public class Answers_Activity extends AppCompatActivity {
         finish();
     }
 }
+
