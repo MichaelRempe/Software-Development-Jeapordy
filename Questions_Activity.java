@@ -33,7 +33,7 @@ public class Questions_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
-
+        
         Collections.addAll(jsQuestions,"In the Client/Server Model, what side does JS run?", "How can you send text directly to an html page in JS?", "How do you grab specific HTML elements using JS?",
                                                 "What set of chars is required to declare variables in JS?", "Are types required in variable declaration in JS?","This operation checks if both the type and value of an object are equal in JS?",
                                                 "What tags can you use in HTML files to define JS functions?", "What built in method defines functions in JS?");
@@ -46,10 +46,12 @@ public class Questions_Activity extends AppCompatActivity {
                                                 "Fill in the blank to make this object the same width as its parent", "What method does Android use to find specific views?", "What is the first method in the Activity life Cycle defined by Android?",
                                                 "This file holds and declares essential information concerning the App, such as its name, activities, and permissions", "What method is implemented to ensure the state of applications is preserved in Android?");
 
+        //Silly hints are given in the text field where the user provides his/her answer
         Collections.addAll(jsHints,"Browser","d.w","d.gebi","starts with a V!","niet","3*=","<...></...>","func");
         Collections.addAll(phpHints,"Not Browser","Make it Rain", "G!","P!","niet",".","<...>", "This happens in caves" );
         Collections.addAll(andHints,"A synonym is purpose","It can be found in the resource file", "Constructed in JAVA", "android:layout_width=", "fVBI(..)","oC()","Its an XML file!","oSIS()" );
 
+        //Random value is stored for later use when comparing question to answer indicies.
         Random r = new Random();
         random = r.nextInt(jsQuestions.size());
 
